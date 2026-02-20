@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CURSOS</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Toastr -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"/>
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="container mt-4">
+
+<h1 class="mb-4">Registro de Cursos</h1>
+
+<section class="card p-4 mb-4">
+  <h2>Registrar Curso</h2>
+  <form id="formCurso">
+    <div class="mb-3">
+      <label>Nombre del curso</label>
+      <input id="nombreCurso" type="text" class="form-control" required />
+    </div>
+    <div class="mb-3">
+      <label>Nombre del Instructor</label>
+      <input id="nombreInstructor" type="text" class="form-control" required />
+    </div>
+    <div class="mb-3">
+      <label>Número de horas</label>
+      <input id="numeroHoras" type="number" class="form-control" required />
+    </div>
+    <div class="mb-3">
+      <label>Nivel</label>
+      <select id="nivel" class="form-select" required>
+        <option value="Básico">Básico</option>
+        <option value="Intermedio">Intermedio</option>
+        <option value="Avanzado">Avanzado</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label>Fecha de inicio</label>
+      <input id="fechaInicio" type="date" class="form-control" required />
+    </div>
+    <div class="mb-3">
+      <label>Costo del curso</label>
+      <input id="costoCurso" type="number" step="0.01" class="form-control" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Registrar</button>
+  </form>
+</section>
+
+<section class="card p-4">
+  <h2>Cursos Registrados</h2>
+  <table class="table table-bordered">
+    <thead class="table-dark">
+      <tr>
+        <th>Curso</th>
+        <th>Instructor</th>
+        <th>Horas</th>
+        <th>Nivel</th>
+        <th>Fecha Inicio</th>
+        <th>Costo</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody id="tablaCursos"></tbody>
+  </table>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>
