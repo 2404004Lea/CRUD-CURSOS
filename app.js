@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Archivos estáticos (tu index.html está en la raíz)
-app.use(express.static('public'));
+//app.use(express.static('public'));
 
 // Config MySQL (XAMPP)
 const dbConfig = {
@@ -174,4 +174,5 @@ async function abrirNavegador(url) {
   } catch (err) {
     console.error('No se pudo abrir el navegador:', err.message);
   }
+
 }
